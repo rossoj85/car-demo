@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useFrame, useLoader } from "@react-three/fiber";
 import { MeshReflectorMaterial } from "@react-three/drei";
 import { LinearEncoding, RepeatWrapping, TextureLoader } from "three";
-import * as THREE from 'three';
+
 
 
 export function Ground() {

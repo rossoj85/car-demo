@@ -6,7 +6,7 @@ import {
   Bloom,
   ChromaticAberration,
 } from "@react-three/postprocessing";
-import { BlendFunction } from "postprocessing";
+// import { BlendFunction } from "postprocessing";
 import {
   CubeCamera,
   Environment,
@@ -50,8 +50,8 @@ function CarShow() {
         // intensity={1.5}
         intensity={120}
         angle={0.6}
-        // penumbra={0.5}
-        penumbra={1}
+        penumbra={0.5}
+        // penumbra={1}
         position={[5, 5, 0]}
         castShadow
         shadow-bias={-0.0001}
@@ -60,10 +60,10 @@ function CarShow() {
       // light blue 
         color={[0.14, 0.5, 1]}
         // intensity={2}
-        intensity={80}
+        intensity={60}
         angle={0.6}
-        // penumbra={0.5}
-        penumbra={1}
+        penumbra={0.5}
+        // penumbra={1}
         position={[-5, 5, 0]}
         castShadow
         shadow-bias={-0.0001}
@@ -75,17 +75,20 @@ function CarShow() {
 
       <EffectComposer>
         {/* <DepthOfField focusDistance={0.0035} focalLength={0.01} bokehScale={3} height={480} /> */}
-        <Bloom
-          blendFunction={BlendFunction.ADD}
+        {/* <Bloom
+          // blendFunction={BlendFunction.ADD}
           intensity={1.3} // The bloom intensity.
           width={300} // render width
           height={300} // render height
           kernelSize={5} // blur kernel size
           luminanceThreshold={0.15} // luminance threshold. Raise this value to mask out darker elements in the scene.
           luminanceSmoothing={0.025} // smoothness of the luminance threshold. Range is [0, 1]
-        />
+        /> */}
+
+      <Bloom mipmapBlur luminanceThreshold={.2} levels={8} intensity={1} toneMapped={false} />
+
         <ChromaticAberration
-          blendFunction={BlendFunction.NORMAL} // blend mode
+          // blendFunction={BlendFunction.NORMAL} // blend mode
           offset={[0.0005, 0.0012]} // color offset
         />
       </EffectComposer>
