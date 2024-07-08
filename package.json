@@ -2,7 +2,7 @@
   "name": "car-demo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://rossoj85.github.io/car-demo",
+  "homepage": "https://rossoj85.github.io/car-demo/",
   "dependencies": {
     "@react-three/drei": "^9.4.2",
     "@react-three/fiber": "^8.16.8",
